@@ -95,9 +95,11 @@ flowchart TD
 
     B -->|Press 1| C[Second Menu]
     B -->|Press 2| C[Second Menu]
+    B -->|Invalid Input| B
 
     C -->|Press 1| D[Play Audio]
     C -->|Press 2| E[Forward Call]
+    C -->|Invalid Input| C
 
     D --> F[End]
     E --> F[End]
