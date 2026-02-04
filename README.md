@@ -117,11 +117,17 @@ flowchart TB
 ```
 
 
-🧪 Testing the IVR
+TEST
+----------------
+
 Open UI at http://localhost:8000
+
 Click Call Me
+
 Receive outbound call
+
 Follow IVR prompts:
+
 
 Level 1 – Language Menu
 Press 1 → English
@@ -134,9 +140,13 @@ Press 2 → Forward call to associate
 Invalid input → menu repeats
 
 ✅ Expected Result
+
 Outbound call is initiated
+
 IVR menus respond to DTMF input
+
 Audio plays or call forwards
+
 Invalid inputs retry gracefully
 
 
