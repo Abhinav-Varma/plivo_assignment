@@ -85,9 +85,11 @@ flowchart LR
     *   Play audio
         
     *   OR forward call to associate
-        
 
-### IVR Flowchart
+
+        
+IVR Flowchart
+----------------
 
 ```mermaid
 flowchart TB
@@ -113,3 +115,30 @@ flowchart TB
     E --> F
 
 ```
+
+
+🧪 Testing the IVR
+Open UI at http://localhost:8000
+Click Call Me
+Receive outbound call
+Follow IVR prompts:
+
+Level 1 – Language Menu
+Press 1 → English
+Press 2 → Spanish
+Invalid input → menu repeats
+
+Level 2 – Action Menu
+Press 1 → Audio playback
+Press 2 → Forward call to associate
+Invalid input → menu repeats
+
+✅ Expected Result
+Outbound call is initiated
+IVR menus respond to DTMF input
+Audio plays or call forwards
+Invalid inputs retry gracefully
+
+
+
+
