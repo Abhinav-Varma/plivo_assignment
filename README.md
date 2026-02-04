@@ -43,22 +43,8 @@ The system demonstrates:
 *   🔐 Secrets managed via .env
     
 *   🎨 Minimal frontend for demo purposes
+
     
-
-## 🏗 High-Level Architecture
-
-```mermaid
-flowchart LR
-    A[Browser UI] --> B[FastAPI Backend]
-    B --> C[Plivo REST API]
-    C --> D[User Phone]
-
-    D -->|DTMF| C
-    C -->|Webhooks| B
-
-    E[ngrok HTTPS Tunnel] --> B
-    C --> E
-```
 
 ## 🧭 System Architecture
 
@@ -109,11 +95,9 @@ flowchart TD
 
     B -->|Press 1| C[Second Menu]
     B -->|Press 2| C[Second Menu]
-    B -->|Invalid| B
 
     C -->|Press 1| D[Play Audio]
     C -->|Press 2| E[Forward Call]
-    C -->|Invalid| C
 
     D --> F[End]
     E --> F[End]
