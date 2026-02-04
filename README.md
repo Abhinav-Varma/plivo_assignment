@@ -90,17 +90,26 @@ flowchart LR
 ### IVR Flowchart
 
 ```mermaid
-flowchart TD
-    A[Start Call] --> B[Language Menu]
+flowchart TB
 
-    B -->|Press 1| C[Second Menu]
-    B -->|Press 2| C[Second Menu]
-    B -->|Invalid Input| B
+    A([Start Call])
+    B[Language Menu<br/>Press 1 = English<br/>Press 2 = Spanish]
+    C[Second Menu<br/>Press 1 = Play Audio<br/>Press 2 = Forward Call]
+    D[Play Audio]
+    E[Forward Call]
+    F([End])
 
-    C -->|Press 1| D[Play Audio]
-    C -->|Press 2| E[Forward Call]
-    C -->|Invalid Input| C
+    A --> B
 
-    D --> F[End]
-    E --> F[End]
+    B -->|1| C
+    B -->|2| C
+    B -->|Invalid| B
+
+    C -->|1| D
+    C -->|2| E
+    C -->|Invalid| C
+
+    D --> F
+    E --> F
+
 ```
